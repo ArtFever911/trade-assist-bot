@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const axios = require('axios');
 const { getNotifiers } = require("../../repositories/notifiers");
 const TelegramBot = require("../bot");
 
@@ -14,8 +15,8 @@ const fundingJob = async () => {
     try {
         const bot = TelegramBot.getInstance().getBotInstance();
         const subscribers = getNotifiers();
-        const response = await fetch(url);
-        const { data } = await response.json();
+        const response = await axios.get(url);
+        const { data: { data } } = await response;
         subscribers.forEach(id => bot.telegram.sendMessage(id, data))
     } catch (error) {
         console.log(error)
