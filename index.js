@@ -1,14 +1,14 @@
 const { TelegramBot, Scheduler } = require('./packages');
 const unexpectedErrorHandler = (error) => {
-    logger.error(error);
-    exitHandler();
+    console.error(error);
+    process.exit();
 };
 
 process.on('uncaughtException', unexpectedErrorHandler);
 process.on('unhandledRejection', unexpectedErrorHandler);
 
 process.on('SIGTERM', () => {
-    logger.info('SIGTERM received');
+    console.info('SIGTERM received');
     if (server) {
         server.close();
     }

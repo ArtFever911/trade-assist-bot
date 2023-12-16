@@ -4,6 +4,8 @@ const { production, development } = require('./core');
 const { commands } = require('./constants');
 const actions = require('./actions');
 
+const BOT_NAME = '@voice_of_madness_bot';
+
 dotenv.config();
 
 const BOT_TOKEN = process.env.BOT_TOKEN || '';
@@ -28,7 +30,6 @@ class TelegramBot {
 
     init() {
         this.setBotCommands();
-        // testBot(this.bot)
         this.setBotActions();
 
     }
@@ -45,6 +46,7 @@ class TelegramBot {
     }
 
     setBotActions() {
+        this.bot.hears(BOT_NAME, actions.main);
         Object.keys(actions).forEach(key => {
             this.bot.command(key, actions[key])
         })

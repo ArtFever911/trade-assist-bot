@@ -64,7 +64,6 @@ class Scheduler {
     }
 
     runJobs() {
-        console.log({ jobs: this.jobs })
         Object.keys(this.jobs).forEach(this.runJob)
     }
 
