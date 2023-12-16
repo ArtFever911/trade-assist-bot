@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "DEBUG=bot* nodemon index.js",
     "devWindows": "@powershell -Command $env:DEBUG='bot*';nodemon index.js",

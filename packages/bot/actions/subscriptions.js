@@ -15,7 +15,6 @@ const subscriptions = async (ctx) => {
 
 const unsubscribe = async (ctx) => {
     const { chat: { id } } = ctx;
-    console.log({ id })
     try {
         removeNotification(id);
         await ctx.reply(
