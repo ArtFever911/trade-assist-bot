@@ -1,5 +1,5 @@
 const buttons = {
-    'start': ["/about", "/subscriptions"],
+    'start': ["/funding", "/about", "/subscriptions"],
     'subscribe': ["/subscribe", "/main"],
     'unsubscribe': ["/unsubscribe", "/main"]
 }

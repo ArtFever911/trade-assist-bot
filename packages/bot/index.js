@@ -31,7 +31,6 @@ class TelegramBot {
     init() {
         this.setBotCommands();
         this.setBotActions();
-
     }
 
     static getInstance() {
