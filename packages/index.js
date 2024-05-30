@@ -1,7 +1,7 @@
 const TelegramBot = require('./bot');
-const Scheduler = require('./scheduler');
+const Server = require('./server');
 
 module.exports = {
     TelegramBot,
-    Scheduler
+    Server
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.x"
+    "node": "16.14.2"
   },
   "scripts": {
     "dev": "DEBUG=bot* nodemon index.js",
